@@ -1,0 +1,47 @@
+import React from "react";
+import bookkes from "../../images/bookkes.jpg"
+import "./style.css";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
+
+function Nav(props) {
+
+    return (
+        <div>
+            <nav className="nav-wrapper green">
+                <a href="/" className="brand-logo">ßøôkké</a>
+                <ul className="right hide-on-med-and-down">
+                    <li>
+                        <input placeholder="search" id="search" type="text"
+                            onChange={props.request}
+                            onKeyPress={props.onKeyPress}
+                        />
+                    </li>
+                    <li>
+                        <Link to="/">saved</Link>
+                    </li>
+                    {/* <li>
+                    <Link to="/Search" >search</Link>
+                </li> */}
+                    <li>
+                        <h5>|</h5>
+                    </li>
+                    <li>
+                        <a href="https://prtflo3.herokuapp.com/portfolio">portfolio</a>
+                    </li>
+                </ul>
+            </nav>
+            <div>
+                <img src={bookkes} className="z-depth-3" />
+            </div>
+        </div>
+    )
+};
+
+// onClick={() => props.request()}
+
+export default Nav;
