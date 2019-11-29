@@ -3,12 +3,11 @@
     height: 250px;
 } */
 
-img {
+.navimg {
     width: 100%;
     height: auto;
     margin-top: -40%;
     z-index: -1;
-    margin-bottom: 20%;
 }
 
 .nav-wrapper {

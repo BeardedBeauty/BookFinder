@@ -16,13 +16,10 @@ function Nav(props) {
                 <a href="/" className="brand-logo">ßøôkké</a>
                 <ul className="right hide-on-med-and-down">
                     <li>
-                        <input placeholder="search" id="search" type="text"
-                            onChange={props.request}
-                            onKeyPress={props.onKeyPress}
-                        />
+                        <Link to="/Search">saved</Link>
                     </li>
                     <li>
-                        <Link to="/">saved</Link>
+                        <Link to="/">home</Link>
                     </li>
                     {/* <li>
                     <Link to="/Search" >search</Link>
@@ -36,7 +33,7 @@ function Nav(props) {
                 </ul>
             </nav>
             <div>
-                <img src={bookkes} className="z-depth-3" alt="bookkes" />
+                <img src={bookkes} className="navimg" alt="bookkes" />
             </div>
         </div>
     )
