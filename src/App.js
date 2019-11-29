@@ -29,6 +29,7 @@ class App extends React.Component {
 				return response.data.items;
 			}).then(g => {
 				this.setState({ data: g });
+				// console.log(this.state.data[0].volumeInfo.title);
 			});
 	};
 
@@ -58,11 +59,12 @@ class App extends React.Component {
 					<div className="row">
 						{this.state.data.map(page =>
 							<Book>
-								image={page.volumeInfo.previewLink}
+								image={page.selfLink}
 								authors={page.volumeInfo.authors}
 								desc={page.volumeInfo.description}
 								title={page.volumeInfo.title}
 								link={page.volumeInfo.infoLink}
+								{/* key={page.id} */}
 							</Book>
 						)}
 					</div>

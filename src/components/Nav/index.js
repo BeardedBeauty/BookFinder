@@ -36,7 +36,7 @@ function Nav(props) {
                 </ul>
             </nav>
             <div>
-                <img src={bookkes} className="z-depth-3" />
+                <img src={bookkes} className="z-depth-3" alt="bookkes" />
             </div>
         </div>
     )

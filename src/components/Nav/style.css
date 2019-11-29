@@ -8,6 +8,7 @@ img {
     height: auto;
     margin-top: -40%;
     z-index: -1;
+    margin-bottom: 20%;
 }
 
 .nav-wrapper {
