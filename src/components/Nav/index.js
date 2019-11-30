@@ -16,7 +16,7 @@ function Nav(props) {
                 <a href="/" className="brand-logo">ßøôkké</a>
                 <ul className="right hide-on-med-and-down">
                     <li>
-                        <Link to="/Search">saved</Link>
+                        <Link to="/saved">saved</Link>
                     </li>
                     <li>
                         <Link to="/">home</Link>

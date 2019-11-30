@@ -21,7 +21,7 @@ class App extends React.Component {
 					<Nav />
 					<Switch>
 						<Route path="/" exact component={Home} />
-						<Route path="/Saved" component={Saved} />
+						<Route path="/saved" component={Saved} />
 					</Switch>
 				</Router>
 			</Wrapper>
