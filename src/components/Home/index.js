@@ -39,6 +39,11 @@ class Home extends React.Component {
         };
     };
 
+    saveBook = (stuff) => {
+        axios.post('http://localhost:3003/book/save', stuff)
+            .then(res => console.log(res.data));
+    }
+
     render() {
         return (
             <>
@@ -62,6 +67,7 @@ class Home extends React.Component {
                                     desc={page.volumeInfo.description}
                                     title={page.volumeInfo.title}
                                     link={page.volumeInfo.infoLink}
+                                    save={this.saveBook}
                                 />
                             )
                         }
@@ -71,4 +77,5 @@ class Home extends React.Component {
         )
     }
 }
+
 export default Home;

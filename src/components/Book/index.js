@@ -15,7 +15,7 @@ function Book(props) {
                     </div>
                     <div className="card-action">
                         <a href={props.link}>google books</a>
-                        <a href="#">save</a>
+                        <a href="/save">save</a>
                     </div>
                 </div>
             </div>
