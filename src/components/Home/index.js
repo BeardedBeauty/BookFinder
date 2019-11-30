@@ -3,7 +3,6 @@ import Book from "../Book";
 import axios from "axios";
 import "./style.css";
 
-// function Home(props) {}
 class Home extends React.Component {
     constructor(props) {
         super(props);

@@ -21,9 +21,6 @@ function Nav(props) {
                     <li>
                         <Link to="/">home</Link>
                     </li>
-                    {/* <li>
-                    <Link to="/Search" >search</Link>
-                </li> */}
                     <li>
                         <h5>|</h5>
                     </li>
