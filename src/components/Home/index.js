@@ -15,15 +15,20 @@ class Home extends React.Component {
     send = () => {
         const w = this.state.q.replace(" ", "+");
         axios.get("https://www.googleapis.com/books/v1/volumes?q=" + w + "&maxresults=30&key=AIzaSyDdG-co-zolXTJoNeRYFwE2f7L4qLDVRCY")
-            .then(response => {
-                return response.data.items;
-            }).then(g => {
+            .then(response => { return response.data.items; }).then(g => {
+                let h = [];
                 for (let i = 0; i < g.length; i++) {
-                    if (!g[i].volumeInfo.imageLinks) {
-                        g.splice(i, 1);
-                    }
+                    !g[i].volumeInfo.imageLinks ? g.splice(i, 1) : h.push({
+                        id: g[i].id,
+                        title: g[i].volumeInfo.title,
+                        desc: g[i].volumeInfo.description,
+                        authors: g[i].volumeInfo.authors,
+                        link: g[i].volumeInfo.infoLink,
+                        image: g[i].volumeInfo.imageLinks.thumbnail
+                    });
                 }
-                this.setState({ data: g });
+                // console.log(h);
+                this.setState({ data: h });
             });
     };
 
@@ -39,9 +44,10 @@ class Home extends React.Component {
         };
     };
 
-    saveBook = (stuff) => {
-        axios.post('http://localhost:3003/book/save', stuff)
-            .then(res => console.log(res.data));
+    saveBook = (o) => {
+        console.log(o);
+        axios.post('http://localhost:3003/save', o)
+        // .then(res => console.log(res.data));
     }
 
     render() {
@@ -62,12 +68,14 @@ class Home extends React.Component {
                         {
                             this.state.data.map(page =>
                                 <Book
-                                    image={page.volumeInfo.imageLinks.thumbnail}
-                                    authors={page.volumeInfo.authors}
-                                    desc={page.volumeInfo.description}
-                                    title={page.volumeInfo.title}
-                                    link={page.volumeInfo.infoLink}
-                                    save={this.saveBook}
+                                    image={page.image}
+                                    authors={page.authors}
+                                    desc={page.desc}
+                                    title={page.title}
+                                    link={page.link}
+                                    key={page.id}
+                                    id={page.id}
+                                    saveBook={this.saveBook}
                                 />
                             )
                         }

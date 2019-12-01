@@ -1,8 +1,12 @@
-let mongoose = require("mongoose");
+const mongoose = require("mongoose");
 
 let Schema = mongoose.Schema;
 
 let Book = new Schema({
+    id: {
+        type: String,
+        required: true
+    },
     title: {
         type: String,
         required: true
@@ -17,11 +21,11 @@ let Book = new Schema({
     },
     image: {
         type: String,
-        required: true
+        required: false
     },
     desc: {
         type: String,
-        required: true
+        required: false
     }
 });
 
