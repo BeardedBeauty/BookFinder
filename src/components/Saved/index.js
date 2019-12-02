@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import Book from "../Book";
 
 class Saved extends React.Component {
     constructor(props) {
@@ -10,14 +11,14 @@ class Saved extends React.Component {
     };
 
     componentDidMount() {
-        axios.get('localhost:3003/')
+        axios.get('http://localhost:3003/all')
             .then(response => {
                 this.setState({ books: response.data })
             })
             .catch((error) => {
                 console.log(error);
-            })
-    }
+            });
+    };
 
     render() {
         return (
@@ -30,7 +31,20 @@ class Saved extends React.Component {
                 </div>
                 <div className="container">
                     <div className="row">
-                        <p>{this.state.books}</p>
+                        {
+                            this.state.books.map(page =>
+                                <Book
+                                    image={page.image}
+                                    authors={page.authors}
+                                    desc={page.desc}
+                                    title={page.title}
+                                    link={page.link}
+                                    key={page.id}
+                                    id={page.id}
+                                // saveBook={this.saveBook}
+                                />
+                            )
+                        }
                     </div>
                 </div>
             </>
