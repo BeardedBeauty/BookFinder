@@ -5,7 +5,7 @@ const app = express();
 const path = require("path");
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "client/build")));
+app.use(express.static(path.join(__dirname, "client/build")))
 
 const PORT = process.env.PORT || 3003;
 let MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/bookdb";
