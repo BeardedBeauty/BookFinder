@@ -46,7 +46,7 @@ class Home extends React.Component {
 
     saveBook = (o) => {
         console.log(o);
-        axios.post('http://localhost:3003/save', o)
+        axios.post('/save', o)
         // .then(res => console.log(res.data));
     }
 

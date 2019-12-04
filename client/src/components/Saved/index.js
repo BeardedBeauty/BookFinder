@@ -11,7 +11,7 @@ class Saved extends React.Component {
     };
 
     componentDidMount() {
-        axios.get('http://localhost:3003/all')
+        axios.get('/all')
             .then(response => {
                 this.setState({ books: response.data })
             })
