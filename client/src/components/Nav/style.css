@@ -13,3 +13,8 @@
 .nav-wrapper {
     position: absolute;
 }
+
+.wtf {
+    float: left;
+    margin: 10px;
+}

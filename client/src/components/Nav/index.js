@@ -11,8 +11,9 @@ import {
 function Nav(props) {
 
     return (
-        <div>
+        <>
             <nav className="nav-wrapper green">
+                <div className="wtf"></div>
                 <a href="/" className="brand-logo">ßøôkké</a>
                 <ul className="right hide-on-med-and-down">
                     <li>
@@ -27,12 +28,15 @@ function Nav(props) {
                     <li>
                         <a href="https://prtflo3.herokuapp.com/portfolio">portfolio</a>
                     </li>
+                    <li>
+                        <div className="wtf"></div>
+                    </li>
                 </ul>
             </nav>
             <div>
                 <img src={bookkes} className="navimg" alt="bookkes" />
             </div>
-        </div>
+        </>
     )
 };
 
