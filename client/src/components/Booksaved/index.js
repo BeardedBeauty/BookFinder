@@ -15,7 +15,7 @@ function Book(props) {
                     </div>
                     <div className="card-action">
                         <a className="waves-effect waves-dark btn-flat" href={props.link}>google books</a>
-                        <a className="waves-effect waves-dark btn-flat" onClick={() => props.deleteBook(props)} >remove</a>
+                        {/* <a className="waves-effect waves-dark btn-flat" onClick={() => props.deleteBook(props)} >remove</a> */}
                     </div>
                 </div>
             </div>
