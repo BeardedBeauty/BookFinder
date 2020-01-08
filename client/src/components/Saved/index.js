@@ -20,6 +20,11 @@ class Saved extends React.Component {
             });
     };
 
+    deleteBook = (o) => {
+        console.log(o);
+        axios.delete('/delete', o).then(res => console.log(res.data));
+    }
+
     render() {
         return (
             <>
@@ -41,6 +46,7 @@ class Saved extends React.Component {
                                     link={page.link}
                                     key={page.id}
                                     id={page.id}
+                                    deleteBook={this.deleteBook}
                                 // saveBook={this.saveBook}
                                 />
                             )

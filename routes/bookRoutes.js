@@ -13,7 +13,11 @@ module.exports = app => {
         Book.book.create(req.body).then(book => {
             res.json(book);
         }).catch(err => {
-            // res.json(err);
+            console.log(err)
+        });
+    });
+    app.delete("/delete", (req, res) => {
+        Book.book.findById({ id: req.params.id }).then(book => book.remove()).catch(err => {
             console.log(err)
         });
     });

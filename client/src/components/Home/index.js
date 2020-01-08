@@ -38,11 +38,11 @@ class Home extends React.Component {
         // console.log(q);
     };
 
-    // keyPress = (event) => {
-    //     if (event.key === 'Enter') {
-    //         this.send();
-    //     };
-    // };
+    keyPress = (event) => {
+        if (event.key === 'Enter') {
+            this.send();
+        };
+    };
 
     saveBook = (o) => {
         console.log(o);
