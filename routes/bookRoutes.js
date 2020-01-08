@@ -17,8 +17,9 @@ module.exports = app => {
         });
     });
     app.delete("/delete", (req, res) => {
-        Book.book.findById({ id: req.params.id }).then(book => book.remove()).catch(err => {
-            console.log(err)
-        });
+        console.log(req.params);
+        // Book.book.findById({ id: req.params }).then(book => book.remove()).catch(err => {
+        //     console.log(err)
+        // });
     });
 };

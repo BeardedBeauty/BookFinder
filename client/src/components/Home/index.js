@@ -26,8 +26,7 @@ class Home extends React.Component {
                         link: g[i].volumeInfo.infoLink,
                         image: g[i].volumeInfo.imageLinks.thumbnail
                     });
-                }
-                // console.log(h);
+                };
                 this.setState({ data: h });
             });
     };
