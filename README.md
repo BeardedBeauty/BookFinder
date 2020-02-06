@@ -1,5 +1,5 @@
 # bookke
-Bookke is a book finder using the google books API. Displays description of book with cover.
+Bookke is a book finder using the google books API. When searching, a description of the book with the cover is displayed. This is a full stack website, based on the MERN stack.
 View [live site.](http://bookkebooks.herokuapp.com/)
 
 ## Usage
