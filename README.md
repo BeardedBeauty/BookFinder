@@ -4,9 +4,11 @@ View [live site.](http://bookkebooks.herokuapp.com/)
 
 ## Usage
 When searching for a book, displayed books have a "save" button that saves the book description to a database. View the saved books by clicking on "saved" will pull in all of the books from the database. This can be accessed by navigating through the menu:
+
 ![nav](nav.png)
 
 To search for a book, press return after entering something in the search field. Results will be displayed from the API:
+
 ![item](item.png)
 
 ## Built With
